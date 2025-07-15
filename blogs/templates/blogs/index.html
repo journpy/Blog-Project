@@ -1,0 +1,13 @@
+{% block content %}
+
+<h1 style="color: blue; text-align: center;">Blog</h1>
+{% for blog in blogs %}
+<section>
+<h2>{{ blog.title }}</h2>
+<p>{{ blog.author }}</p>
+<p>{{ blog.content }}</p>
+<p>{{ blog.date_created }}</p>
+</section>
+
+{% endfor %}
+{% endblock content %}
