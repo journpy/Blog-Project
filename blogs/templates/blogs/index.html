@@ -1,10 +1,16 @@
+{% extends 'blogs/base.html' %}
+
+{% block page_header %}
+<h1 style="color: blue; text-align: center;">Blog</h1>
+{% endblock page_header %}
+
 {% block content %}
 
-<h1 style="color: blue; text-align: center;">Blog</h1>
+
 {% for blog in blogs %}
 <section>
-<h2>{{ blog.title }}</h2>
-<p>{{ blog.author }}</p>
+<h2 class=text-success>{{ blog.title }}</h2>
+<p>Author: {{ blog.author }}</p>
 <p>{{ blog.content }}</p>
 <p>{{ blog.date_created }}</p>
 </section>
