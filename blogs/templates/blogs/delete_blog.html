@@ -1,0 +1,20 @@
+{% extends 'blogs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+<h1 class="text-primary text-center">Delete Blog</h1>
+{% endblock page_header %}
+
+{% block content %}
+<form method='post'>
+{% csrf_token %}
+<p>{{ blog.title }}</p>
+<p>{{ blog.author }}</p>
+<p>{{ blog.content }}</p>
+<p>{{ blog.date_created }}</p>
+<p>{{ blog.date_updated }}</p>
+
+{% bootstrap_button button_type='submit' content='Delete' %}
+</form>
+
+{% endblock content %}

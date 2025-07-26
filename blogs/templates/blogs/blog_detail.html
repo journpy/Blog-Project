@@ -1,11 +1,10 @@
 {% extends 'blogs/base.html' %}
 
-{% block page_header %}{{ blog.title }}{% endblock page_header %}
+{% block page_header %}<h1 class="text-center text-primary">{{ blog.title }}</h1>{% endblock page_header %}
 
 {% block content %}
-<p>This blog has a unique identity of {{ blog.id }}.</p>
 <p>Author: {{ blog.author }}</p>
 <p class='lead'>{{ blog.content }}</p>
 <p>This blog was created on {{ blog.date_created }}</p>
-
+<p>This blog was last updated on {{ blog.date_updated }}</p>
 {% endblock content %}

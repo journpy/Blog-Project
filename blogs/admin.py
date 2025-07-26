@@ -8,4 +8,8 @@ class BlogAdmin(admin.ModelAdmin):
     search_fields = ('title',)
     list_filter = ['author']
 
+    def save_model(self, request, obj, form, change):
+        obj.author = request.user
+        super().save_model(request, obj, form, change)
+
 admin.site.register(Blog, BlogAdmin)
