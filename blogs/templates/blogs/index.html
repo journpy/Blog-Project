@@ -9,10 +9,7 @@
 
 {% for blog in blogs %}
 <section>
-<h4 class=text-success>{{ blog.title }}</h4>
-<p>Author: {{ blog.author }}</p>
-<p>{{ blog.content }}</p>
-<p>{{ blog.date_created }}</p>
+<h5><a href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a></h5>
 </section>
 
 {% endfor %}
